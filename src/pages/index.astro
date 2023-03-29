@@ -1,11 +1,13 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
+
+const pageTitle = "My Homepage"
 ---
 
-<Layout title="Hello Astro(naut).">
+<Layout title={pageTitle}>
 	<main>
-		<h1>Hello <span class="text-gradient">Astro(naut)</span></h1>
+		<h1 class="text-gradient">{pageTitle}</h1>
 		
 		<a href="/">Home</a>
 		<a href="/about/">About</a>
@@ -50,13 +52,6 @@ import Card from '../components/Card.astro';
 		font-size: 3rem;
 		font-weight: 800;
 		margin: 0;
-	}
-	.text-gradient {
-		background-image: var(--accent-gradient);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-size: 400%;
-		background-position: 0%;
 	}
 	.instructions {
 		line-height: 1.6;
