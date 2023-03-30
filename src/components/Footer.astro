@@ -1,0 +1,26 @@
+---
+import Socila from "./Socila.astro";
+const socialAccounts = [
+  { platform: "github", url: "https://www.github.com/teberl" },
+  {
+    platform: "linkedIn",
+    url: "https://www.linkedin.com/in/thomas-eberl-59708156/",
+  },
+];
+---
+
+<footer>
+  {
+    socialAccounts.map(({ platform, url }) => (
+      <Socila platform={platform} url={url} />
+    ))
+  }
+</footer>
+
+<style>
+  footer {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+</style>
