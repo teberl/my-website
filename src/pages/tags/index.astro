@@ -1,0 +1,17 @@
+---
+import Tags from "../../components/Tags.astro";
+import Layout from "../../layouts/Layout.astro";
+import type { Post } from "../../types/posts";
+import createUniqueTagsFromPosts from "../../utils/createUniqueTagsFromPosts";
+
+const allPosts = (await Astro.glob("../posts/*.md")) as Post[];
+const uniqueTags = createUniqueTagsFromPosts(allPosts);
+
+const pageTitle = "My Tag Index Page";
+---
+
+<Layout title={pageTitle}>
+  <main>
+    <Tags tags={uniqueTags} />
+  </main>
+</Layout>
