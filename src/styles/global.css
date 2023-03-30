@@ -20,6 +20,17 @@ code {
     DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
 }
 
+/* dark theme */
+
+html.dark {
+  background-color: #0d0950;
+  color: #fff;
+}
+
+.dark .nav-links a {
+  color: #fff;
+}
+
 /* navigation */
 .hamburger {
   padding-right: 20px;
