@@ -1,19 +1,25 @@
 ---
+import type { CollectionEntry } from "astro:content";
+
 import Tags from "../components/Tags.astro";
 import Layout from "./Layout.astro";
 
-const { frontmatter } = Astro.props;
+interface Props {
+  postData: CollectionEntry<"posts">["data"];
+}
+
+const { postData } = Astro.props;
 ---
 
 <Layout title={"My Astro Blog"}>
-  <h1>{frontmatter.title}</h1>
-  <p>Published on:{frontmatter.pubDate.slice(0, 10)}</p>
-  <p><em>{frontmatter.description}</em></p>
-  <img src={frontmatter.image.url} width="300" alt={frontmatter.image.alt} />
+  <h1>{postData.title}</h1>
+  <p>Published on:{postData.pubDate.toDateString()}</p>
+  <p><em>{postData.description}</em></p>
+  <img src={postData.image.url} width="300" alt={postData.image.alt} />
 
-  <Tags tags={frontmatter.tags} />
+  <Tags tags={postData.tags} />
 
   <slot />
 
-  <p>Written by {frontmatter.author}</p>
+  <p>Written by {postData.author}</p>
 </Layout>

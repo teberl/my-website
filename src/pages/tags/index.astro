@@ -1,11 +1,10 @@
 ---
+import { getCollection } from "astro:content";
 import Tags from "../../components/Tags.astro";
 import Layout from "../../layouts/Layout.astro";
-import type { Post } from "../../types/posts";
 import createUniqueTagsFromPosts from "../../utils/createUniqueTagsFromPosts";
 
-const allPosts = (await Astro.glob("../posts/*.md")) as Post[];
-const uniqueTags = createUniqueTagsFromPosts(allPosts);
+const uniqueTags = createUniqueTagsFromPosts(await getCollection("posts"));
 
 const pageTitle = "My Tag Index Page";
 ---
