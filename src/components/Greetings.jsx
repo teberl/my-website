@@ -9,7 +9,7 @@ export default function Greeting({messages}) {
   return (
     <div> 
       <h3>{greeting}! Thank you for visiting!</h3>
-      <button onClick={() => setGreeting(randomMessage())}>
+      <button onClick={() => setGreeting(randomMessage())} aria-label="set new greeting">
         New Greeting
       </button>
     </div>
