@@ -1,8 +1,8 @@
 ---
-import MyWebsiteFooter from "../components/myWebsite/MyWebsiteFooter.astro";
-import MyWebsiteHeader from "../components/myWebsite/MyWebsiteHeader.astro";
+import Footer from "../components/landingPage/Footer.astro";
+import Header from "../components/landingPage/Header.astro";
 
-import "../styles/myWebsiteGlobal.css";
+import "../styles/landingPageGlobal.css";
 
 export interface Props {
   title: string;
@@ -25,8 +25,8 @@ const { title } = Astro.props;
     <title>{title}</title>
   </head>
   <body class="flex h-screen flex-col bg-zinc-50 dark:bg-black">
-    <MyWebsiteHeader title={title} />
+    <Header title={title} />
     <slot />
-    <MyWebsiteFooter />
+    <Footer />
   </body>
 </html>

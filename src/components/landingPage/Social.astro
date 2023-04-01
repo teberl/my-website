@@ -1,0 +1,41 @@
+---
+import type { SocialMedia } from "../../types/SocialIcons";
+import SocialIcons from "../../assets/icons";
+
+const socialPlatforms: {
+  platform: string;
+  ariaLabel: string;
+  url: string;
+}[] = [
+  {
+    platform: SocialIcons.Github,
+    ariaLabel: "Follow on GitHub",
+    url: "https://github.com/teberl/",
+  },
+  {
+    platform: SocialIcons.LinkedIn,
+    ariaLabel: "Follow on LinkedIn",
+    url: "https://www.linkedin.com/in/thomas-eberl-59708156/",
+  },
+  // {
+  //   platform: "Twitter",
+  //   ariaLabel: "Follow on Twitter",
+  //   url: "https://twitter.com/",
+  // },
+  {
+    platform: SocialIcons.Instagram,
+    ariaLabel: "Follow on Instagram",
+    url: "https://www.instagram.com/_teberl/",
+  },
+];
+---
+
+<div class="mt-6 flex gap-6">
+  {
+    socialPlatforms.map(({ ariaLabel, url, platform }) => (
+      <a class="group -m-1 p-1" aria-label={ariaLabel} href={url}>
+        <Fragment set:html={platform} />
+      </a>
+    ))
+  }
+</div>
