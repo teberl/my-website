@@ -24,8 +24,7 @@ const { title } = Astro.props;
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
   </head>
-  <!-- TODO remove h-screen when more content comes to the page -->
-  <body class="flex h-screen flex-col bg-zinc-50 dark:bg-black">
+  <body class="flex flex-col bg-zinc-50 dark:bg-black">
     <Header title={title} />
     <slot />
     <Footer />

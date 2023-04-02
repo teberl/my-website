@@ -1,7 +1,7 @@
 ---
 import LandingPageLayout from "../layouts/LandingPageLayout.astro";
-import Images from "../components/landingPage/Images.astro";
 import Social from "../components/landingPage/Social.astro";
+import Work from "../components/landingPage/work/work.astro";
 
 const pageTitle = "Thomas Eberl - Software developer";
 ---
@@ -31,7 +31,17 @@ const pageTitle = "Thomas Eberl - Software developer";
       </p>
       <Social />
     </div>
-    <!-- TODO add images 
-      <Images /> -->
+    <!-- <Images /> -->
+    <!-- TODO add margin-top once blog teasers are available "mt-24 md:mt-28" -->
+    <div class="px-4 sm:px-16 lg:px-24 mx-auto max-w-7xl">
+      <div class="mx-auto grid grid-cols-1 gap-y-20 lg:grid-cols-2">
+        <!-- articles -->
+        <div class="flex flex-col gap-16"></div>
+        <!-- work -->
+        <div class="space-y-10 lg:pl-16 xl:pl-24">
+          <Work />
+        </div>
+      </div>
+    </div>
   </main>
 </LandingPageLayout>
