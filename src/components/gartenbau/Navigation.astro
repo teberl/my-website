@@ -1,0 +1,84 @@
+---
+import { Image } from "@astrojs/image/components";
+
+import LOGO from "../../assets/gartenbau/logo_text_background_transparent.png";
+---
+
+<nav class="py-8 bg-white border-b">
+  <div class="flex items-center justify-between mx-auto lg:max-w-5xl">
+    <a href="/gartenbau-inderst">
+      <Image class="max-w-none" src={LOGO} alt="Gartenbau Inderst Logo" width={164} height={40} format={"webp"} />
+    </a>
+    <button
+      class="hidden"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarCollapse"
+      aria-controls="navbarCollapse"
+      aria-expanded="true"
+      aria-label="Open menu"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="flex w-full font-normal" id="navbarCollapse">
+      <button
+        class="hidden"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarCollapse"
+        aria-controls="navbarCollapse"
+        aria-expanded="true"
+        aria-label="Close menu"
+      >
+        <i class="fe fe-x"></i>
+      </button>
+      <ul class="flex ml-auto">
+        <li class="px-6 py-2 hover:text-lime-800">
+          <a
+            class="nav-link"
+            href="#"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarCollapse"
+            aria-controls="navbarCollapse"
+            aria-expanded="true"
+            aria-label="Gehe zu Leistungen"
+          >
+            Leistungen
+          </a>
+        </li>
+        <li class="px-6 py-2 hover:text-lime-800">
+          <a
+            class="nav-link"
+            href="#"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarCollapse"
+            aria-controls="navbarCollapse"
+            aria-expanded="true"
+            aria-label="Gehe zu über uns"
+          >
+            Über uns
+          </a>
+        </li>
+        <li class="px-6 py-2 hover:text-lime-800">
+          <a
+            class="nav-link"
+            href="#"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarCollapse"
+            aria-controls="navbarCollapse"
+            aria-expanded="true"
+            aria-label="Gehe zu Referenz Gallerie"
+          >
+            Referenzen</a
+          >
+        </li>
+      </ul>
+      <a
+        class="bg-lime-700 text-white font-semibold rounded-md px-4 py-2 my-auto ml-auto hover:bg-lime-800 hover:shadow-gray-400 hover:shadow-lg"
+        href="#contact"
+      >
+        Jetzt anfragen</a
+      >
+    </div>
+  </div>
+</nav>
